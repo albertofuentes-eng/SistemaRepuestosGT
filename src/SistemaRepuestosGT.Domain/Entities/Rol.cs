@@ -1,4 +1,4 @@
-namespace SistemaRepuestosGT.Web.Models.Entities;
+namespace SistemaRepuestosGT.Domain.Entities;
 
 public class Rol : BaseEntity
 {

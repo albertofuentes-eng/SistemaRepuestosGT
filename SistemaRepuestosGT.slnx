@@ -1,2 +1,8 @@
 <Solution>
+  <Folder Name="/src/">
+    <Project Path="src/SistemaRepuestosGT.Application/SistemaRepuestosGT.Application.csproj" />
+    <Project Path="src/SistemaRepuestosGT.Domain/SistemaRepuestosGT.Domain.csproj" />
+    <Project Path="src/SistemaRepuestosGT.Infrastructure/SistemaRepuestosGT.Infrastructure.csproj" />
+    <Project Path="src/SistemaRepuestosGT.Web/SistemaRepuestosGT.Web.csproj" />
+  </Folder>
 </Solution>

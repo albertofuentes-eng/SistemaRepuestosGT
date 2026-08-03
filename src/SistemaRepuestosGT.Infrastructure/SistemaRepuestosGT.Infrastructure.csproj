@@ -1,27 +1,28 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaRepuestosGT.Domain\SistemaRepuestosGT.Domain.csproj" />
+    <ProjectReference Include="..\SistemaRepuestosGT.Application\SistemaRepuestosGT.Application.csproj" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.10">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.10" />
+
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.10">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="10.0.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\SistemaRepuestosGT.Application\SistemaRepuestosGT.Application.csproj" />
-    <ProjectReference Include="..\SistemaRepuestosGT.Infrastructure\SistemaRepuestosGT.Infrastructure.csproj" />
-  </ItemGroup>
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
 
 </Project>
