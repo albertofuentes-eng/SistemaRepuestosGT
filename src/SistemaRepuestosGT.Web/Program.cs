@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using SistemaRepuestosGT.Infrastructure.Data;
 using SistemaRepuestosGT.Infrastructure.DependencyInjection;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using SistemaRepuestosGT.Infrastructure.Seed;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,6 +30,14 @@ Console.WriteLine("=================================");
 builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider
+        .GetRequiredService<ApplicationDbContext>();
+
+    await DbInitializer.SeedAsync(context);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
