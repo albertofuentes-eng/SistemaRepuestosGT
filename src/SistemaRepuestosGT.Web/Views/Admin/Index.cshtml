@@ -1,0 +1,45 @@
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Sistema Repuestos GT</h2>
+
+<hr />
+
+<h4>Bienvenido @User.Identity?.Name</h4>
+
+<p><strong>Rol:</strong> @User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value</p>
+
+<hr />
+
+<table class="table table-bordered">
+    <tr>
+        <th>Usuarios</th>
+        <td>@ViewBag.TotalUsuarios</td>
+    </tr>
+
+    <tr>
+        <th>Roles</th>
+        <td>@ViewBag.TotalRoles</td>
+    </tr>
+
+    <tr>
+        <th>Empresas</th>
+        <td>@ViewBag.TotalEmpresas</td>
+    </tr>
+
+    <tr>
+        <th>Productos</th>
+        <td>0</td>
+    </tr>
+
+    <tr>
+        <th>Clientes</th>
+        <td>0</td>
+    </tr>
+
+    <tr>
+        <th>Proveedores</th>
+        <td>0</td>
+    </tr>
+</table>

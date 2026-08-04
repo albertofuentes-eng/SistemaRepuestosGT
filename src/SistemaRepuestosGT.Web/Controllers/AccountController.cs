@@ -59,7 +59,7 @@ public class AccountController : Controller
             CookieAuthenticationDefaults.AuthenticationScheme,
             principal);
 
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction("Index", "Admin");
     }
 
     [HttpGet]
